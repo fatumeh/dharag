@@ -1,0 +1,683 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dharag</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- /*============================================= = sweetAlert= =============================================*/ -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="bg-gray-100 overflow-x-hidden">
+    <main class="flex flex-col w-full">
+        <!-- Navbar -->
+        <nav class="flex justify-between items-center py-4 shadow px-4 md:px-10 bg-white sticky top-0 z-50">
+            <!-- Logo -->
+            <a href="#" class="font-bold text-xl md:text-2xl font-['Monotype_Corsiva']">
+          Dharag
+          <span class="text-red-500">Foods</span>
+        </a>
+
+            <!-- Desktop Links -->
+            <ul class="hidden md:flex items-center gap-6">
+                <li class="capitalize">
+                    <a href="#" class="relative group border-b-2 border-yellow-400">
+              Home
+            </a>
+                </li>
+                <li class="capitalize">
+                    <a href="#" class="relative group hover:text-red-500 transition-colors">
+              About us
+            </a>
+                </li>
+                <li class="capitalize">
+                    <a href="#" class="relative group hover:text-red-500 transition-colors">
+              Services
+            </a>
+                </li>
+                <li class="capitalize">
+                    <a href="#" class="relative group hover:text-red-500 transition-colors">
+              Contact us
+            </a>
+                </li>
+            </ul>
+
+            <div class="flex items-center gap-4">
+                <button class="hidden sm:block bg-blue-500 text-white rounded-lg px-4 py-2 hover:bg-blue-600 transition-colors">
+            Book Table
+          </button>
+                <button id="menu-btn" class="md:hidden text-2xl">
+            <i class="bi bi-list"></i>
+          </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b shadow-lg flex flex-col p-4 space-y-4">
+            <a href="#" class="hover:text-red-500">Home</a>
+            <a href="#" class="hover:text-red-500">About us</a>
+            <a href="#" class="hover:text-red-500">Services</a>
+            <a href="#" class="hover:text-red-500">Contact us</a>
+            <button class="bg-blue-500 text-white rounded px-4 py-2 w-full">
+          Book Table
+        </button>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="flex flex-col md:flex-row bg-white items-center justify-between p-6 md:p-16 gap-10">
+            <div class="text-center md:text-left md:max-w-xl">
+                <h1 class="text-4xl md:text-6xl font-extrabold font-['Pristina'] tracking-tight text-gray-900 leading-tight">
+                    Welcome To Our
+                    <br /> Dharag
+                    <span class="text-red-600 font-['Gabriola'] relative inline-block">
+              Foods
+              <span
+                class="absolute left-0 -bottom-1 w-full h-1 bg-yellow-400 rounded-full"
+              ></span>
+                    </span>
+                </h1>
+                <p class="mt-6 text-gray-600 text-sm md:text-base">
+                    Experience the finest culinary delights crafted with passion. From our kitchen to your table, we bring you flavors that feel like home.
+                </p>
+                <div class="py-6 flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
+                    <button class="order-btn bg-orange-500 text-white py-3 px-8 rounded-full hover:bg-orange-600 transition shadow-lg w-full sm:w-auto">
+              Order Now
+              <i class="bi bi-cart ms-2"></i>
+            </button>
+                    <a href="#" class="text-orange-500 font-bold hover:underline">
+              View Menu
+            </a>
+                </div>
+            </div>
+
+            <div class="w-full max-w-sm md:max-w-md aspect-square overflow-hidden rounded-2xl">
+                <img class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" src="https://i.pinimg.com/1200x/23/b1/62/23b162c987e481b7ba2916aebd1abc66.jpg" alt="Dharag Foods" />
+            </div>
+        </div>
+        <section id="about" class="py-16 bg-white">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="w-full md:w-1/2">
+                        <img src="https://i.pinimg.com/736x/37/e4/eb/37e4eb3626f8d09050eccddc414dc8a7.jpg" alt="Our Kitchen" class="rounded-2xl object-cover h-96 w-full" />
+                    </div>
+
+                    <div class="w-full md:w-1/2">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                            Crafting Flavors Since
+                            <span class="text-red-500">2020</span>
+                        </h2>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Welcome to
+                            <span class="font-semibold text-gray-800">Dharag</span> , where passion meets the plate. What started as a small kitchen experiment has grown into a local favorite for food lovers who crave authenticity and bold flavors.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Whether it’s our hand-spun milkshakes, our signature pizzas, or the perfect shawarma, we believe in using only the freshest ingredients sourced from local farmers. Every bite is designed to tell a story of quality and care.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center gap-2">
+                                <span class="text-red-500 font-bold">✓</span>
+                                <span class="text-sm font-medium text-gray-700">
+                    Fresh Ingredients
+                  </span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-red-500 font-bold">✓</span>
+                                <span class="text-sm font-medium text-gray-700">
+                    Expert Chefs
+                  </span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-red-500 font-bold">✓</span>
+                                <span class="text-sm font-medium text-gray-700">
+                    Fast Delivery
+                  </span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-red-500 font-bold">✓</span>
+                                <span class="text-sm font-medium text-gray-700">
+                    Hygiene First
+                  </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="p-6">
+            <h1 class="text-3xl font-bold text-center md:text-left md:ms-10">
+                Our Menu
+            </h1>
+            <div class="flex flex-wrap justify-center gap-3 mt-6">
+                <a href="#" data-target="milkshake" class="menu-link bg-gray-200 hover:bg-red-500 hover:text-white rounded-full px-5 py-2 transition">
+            Milkshakes
+          </a>
+                <a href="#" data-target="fastFood" class="menu-link bg-red-500 text-white rounded-full px-5 py-2 shadow-md">
+            Fast Food
+          </a>
+                <a href="#" data-target="pizza" class="menu-link bg-gray-200 hover:bg-red-500 hover:text-white rounded-full px-5 py-2 transition">
+            Pizza
+          </a>
+                <a href="#" data-target="Shuwarma" class="menu-link bg-gray-200 hover:bg-red-500 hover:text-white rounded-full px-5 py-2 transition">
+            Shawarma
+          </a>
+            </div>
+        </div>
+    </main>
+    <!-- /** * *menu section * */ -->
+
+    <section id="fastFood" class="menu-section py-10">
+        <h2 class="text-3xl font-bold text-center mb-8 font-['Pristina']">
+            Fast Food Specials
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+            <div class="shadow-lg bg-white rounded-xl overflow-hidden flex flex-col h-full hover:shadow-2xl transition-shadow">
+                <div class="w-full overflow-hidden bg-gray-100">
+                    <img src="https://i.pinimg.com/736x/1d/84/44/1d84446b4d721830483d22d46cae61c8.jpg" class="w-full h-auto object-contain hover:scale-110 transition-transform duration-500" alt="Burger" />
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-bold text-xl">Classic Burger</h3>
+                        <span class="text-orange-600 font-bold">$12.00</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-2">
+                        Juicy beef patty with fresh lettuce, tomatoes, and our secret house sauce.
+                    </p>
+                    <button class="order-btn bg-orange-500 text-white py-3 px-8 rounded-full hover:bg-orange-600 transition shadow-lg w-full sm:w-auto">
+              Order Now
+              <i class="bi bi-cart ms-2"></i>
+            </button>
+                </div>
+            </div>
+
+            <div class="shadow-lg bg-white rounded-xl overflow-hidden flex flex-col h-full hover:shadow-2xl transition-shadow">
+                <div class="w-full overflow-hidden bg-gray-100">
+                    <img src="https://i.pinimg.com/736x/70/bd/89/70bd89d7f924ed3011499a981b05d7bf.jpg" class="w-full h-auto object-contain hover:scale-110 transition-transform duration-500" alt="Pizza" />
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-bold text-xl">Crispy Fries</h3>
+                        <span class="text-orange-600 font-bold">$5.50</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-2">
+                        Golden brown crispy fries seasoned with sea salt and rosemary.
+                    </p>
+                    <button class="order-btn bg-orange-500 text-white py-3 px-8 rounded-full hover:bg-orange-600 transition shadow-lg w-full sm:w-auto">
+              Order Now
+              <i class="bi bi-cart ms-2"></i>
+            </button>
+                </div>
+            </div>
+
+            <div class="shadow-lg bg-white rounded-xl overflow-hidden flex flex-col h-full hover:shadow-2xl transition-shadow">
+                <div class="w-full overflow-hidden bg-gray-100">
+                    <img src="https://i.pinimg.com/736x/84/91/53/849153db67c274ca58e0bc30cd056673.jpg" class="w-full h-auto object-contain hover:scale-110 transition-transform duration-500" alt="Nuggets" />
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-bold text-xl">Chicken Wings</h3>
+                        <span class="text-orange-600 font-bold">$9.99</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-2">
+                        Spicy buffalo wings served with a side of creamy blue cheese dip.
+                    </p>
+                    <button class="order-btn bg-orange-500 text-white py-3 px-8 rounded-full hover:bg-orange-600 transition shadow-lg w-full sm:w-auto">
+              Order Now
+              <i class="bi bi-cart ms-2"></i>
+            </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="milkshake" class="menu-section py-10 bg-pink-50 hidden">
+        <h2 class="text-3xl font-bold text-center mb-8 font-['Pristina']">
+            Creamy Milkshakes
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+            <div class="shadow-lg bg-white rounded-xl overflow-hidden flex flex-col h-full">
+                <div class="w-full overflow-hidden">
+                    <img src="https://i.pinimg.com/736x/e3/78/59/e378592766cf9f7b8a5e30aae5696355.jpg" class="w-full h-auto object-contain hover:scale-110 transition-transform duration-500" alt="Shake" />
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="font-bold text-xl mb-1">Strawberry Bliss</h3>
+                    <span class="text-pink-600 font-bold mb-2">$6.50</span>
+                    <p class="text-sm text-gray-600 mb-4 flex-grow">
+                        Real strawberries blended with premium vanilla ice cream.
+                    </p>
+                    <button class="order-btn bg-orange-500 text-white py-3 px-8 rounded-full hover:bg-orange-600 transition shadow-lg w-full sm:w-auto">
+              Order Now
+              <i class="bi bi-cart ms-2"></i>
+            </button>
+                </div>
+            </div>
+
+            <div class="shadow-lg bg-white rounded-xl overflow-hidden flex flex-col h-full">
+                <div class="w-full overflow-hidden">
+                    <img src="https://i.pinimg.com/1200x/13/31/87/133187688edddd1157da263a05ce05df.jpg" class="w-full h-auto object-contain hover:scale-110 transition-transform duration-500" alt="Shake" />
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="font-bold text-xl mb-1">Chocolate Lava</h3>
+                    <span class="text-pink-600 font-bold mb-2">$7.00</span>
+                    <p class="text-sm text-gray-600 mb-4 flex-grow">
+                        Deep dark chocolate with fudge chunks and whipped cream.
+                    </p>
+                    <button class="order-btn bg-orange-500 text-white py-3 px-8 rounded-full hover:bg-orange-600 transition shadow-lg w-full sm:w-auto">
+              Order Now
+              <i class="bi bi-cart ms-2"></i>
+            </button>
+                </div>
+            </div>
+
+            <div class="shadow-lg bg-white rounded-xl overflow-hidden flex flex-col h-full">
+                <div class="w-full overflow-hidden">
+                    <img src="https://i.pinimg.com/736x/52/d5/08/52d508c2d62b1c8b6dfa2edf7f24c585.jpg" class="w-full h-auto object-contain hover:scale-110 transition-transform duration-500" alt="Shake" />
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="font-bold text-xl mb-1">Vanilla Bean</h3>
+                    <span class="text-pink-600 font-bold mb-2">$6.00</span>
+                    <p class="text-sm text-gray-600 mb-4 flex-grow">
+                        Classic madagascar vanilla bean blended to perfection.
+                    </p>
+                    <button class="order-btn bg-orange-500 text-white py-3 px-8 rounded-full hover:bg-orange-600 transition shadow-lg w-full sm:w-auto">
+              Order Now
+              <i class="bi bi-cart ms-2"></i>
+            </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Shuwarma" class="menu-section py-10 hidden">
+        <h2 class="text-3xl font-bold text-center mb-8 font-['Pristina']">
+            Authentic Shawarma
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+            <div class="shadow-lg bg-white rounded-xl overflow-hidden flex flex-col h-full">
+                <div class="w-full overflow-hidden">
+                    <img src="https://i.pinimg.com/1200x/7e/4c/20/7e4c205497f40cee97eb3b051e6a851c.jpg" class="w-full h-auto object-contain hover:scale-110 transition-transform duration-500" alt="Shuwarma" />
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="font-bold text-xl mb-1">Beef Shawarma</h3>
+                    <span class="text-green-700 font-bold mb-2">$11.50</span>
+                    <p class="text-sm text-gray-600 mb-4 flex-grow">
+                        Spiced beef wrap with tahini, pickles, and fresh onions.
+                    </p>
+                    <button class="order-btn bg-orange-500 text-white py-3 px-8 rounded-full hover:bg-orange-600 transition shadow-lg w-full sm:w-auto">
+              Order Now
+              <i class="bi bi-cart ms-2"></i>
+            </button>
+                </div>
+            </div>
+
+            <div class="shadow-lg bg-white rounded-xl overflow-hidden flex flex-col h-full">
+                <div class="w-full overflow-hidden">
+                    <img src="https://i.pinimg.com/1200x/05/f7/f1/05f7f1f971ea08338e7094f7e067e69a.jpg" class="w-full h-auto object-contain hover:scale-110 transition-transform duration-500" alt="Shuwarma" />
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="font-bold text-xl mb-1">Chicken Wrap</h3>
+                    <span class="text-green-700 font-bold mb-2">$10.50</span>
+                    <p class="text-sm text-gray-600 mb-4 flex-grow">
+                        Garlic chicken shawarma with fries inside and toum sauce.
+                    </p>
+                    <button class="order-btn bg-orange-500 text-white py-3 px-8 rounded-full hover:bg-orange-600 transition shadow-lg w-full sm:w-auto">
+              Order Now
+              <i class="bi bi-cart ms-2"></i>
+            </button>
+                </div>
+            </div>
+
+            <div class="shadow-lg bg-white rounded-xl overflow-hidden flex flex-col h-full">
+                <div class="w-full overflow-hidden">
+                    <img src="https://i.pinimg.com/1200x/2d/9f/a0/2d9fa0dc5098baf6b82f304ca03005e5.jpg" class="w-full h-auto object-contain hover:scale-110 transition-transform duration-500" alt="Shuwarma" />
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="font-bold text-xl mb-1">Mixed Platter</h3>
+                    <span class="text-green-700 font-bold mb-2">$14.00</span>
+                    <p class="text-sm text-gray-600 mb-4 flex-grow">
+                        A mix of beef and chicken served with rice and salad.
+                    </p>
+                    <button class="order-btn bg-orange-500 text-white py-3 px-8 rounded-full hover:bg-orange-600 transition shadow-lg w-full sm:w-auto">
+              Order Now
+              <i class="bi bi-cart ms-2"></i>
+            </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="pizza" class="menu-section py-10 bg-yellow-50 hidden">
+        <h2 class="text-3xl font-bold text-center mb-8 font-['Pristina']">
+            Freshly Baked Pizza
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+            <div class="shadow-lg bg-white rounded-xl overflow-hidden flex flex-col h-full hover:shadow-2xl transition-all border border-transparent hover:border-red-200">
+                <div class="w-full relative overflow-hidden bg-gray-50">
+                    <span class="absolute top-2 left-2 bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded-full z-10 uppercase">
+              Best Seller
+            </span>
+                    <img src="https://i.pinimg.com/1200x/d5/82/b8/d582b8225ac526d7dbf24030976fde0d.jpg" class="w-full h-auto object-contain hover:scale-110 transition-transform duration-500" alt="Pepperoni Pizza" />
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-bold text-xl">Pepperoni Feast</h3>
+                        <span class="text-red-600 font-bold">$18.00</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-2">
+                        Loaded with premium pepperoni slices and extra mozzarella cheese on a crispy crust.
+                    </p>
+                    <button class="order-btn bg-orange-500 text-white py-3 px-8 rounded-full hover:bg-orange-600 transition shadow-lg w-full sm:w-auto">
+              Order Now
+              <i class="bi bi-cart ms-2"></i>
+            </button>
+                </div>
+            </div>
+
+            <div class="shadow-lg bg-white rounded-xl overflow-hidden flex flex-col h-full hover:shadow-2xl transition-all border border-transparent hover:border-red-200">
+                <div class="w-full relative overflow-hidden bg-gray-50">
+                    <img src="https://i.pinimg.com/1200x/96/37/3e/96373e7f8f12e5dec4f1378c4f0e899d.jpg" class="w-full h-auto object-contain hover:scale-110 transition-transform duration-500" alt="Margherita Pizza" />
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-bold text-xl">Classic Margherita</h3>
+                        <span class="text-red-600 font-bold">$14.50</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-2">
+                        Fresh basil leaves, sliced Roma tomatoes, and extra virgin olive oil over buffalo mozzarella.
+                    </p>
+                    <button class="order-btn bg-orange-500 text-white py-3 px-8 rounded-full hover:bg-orange-600 transition shadow-lg w-full sm:w-auto">
+              Order Now
+              <i class="bi bi-cart ms-2"></i>
+            </button>
+                </div>
+            </div>
+
+            <div class="shadow-lg bg-white rounded-xl overflow-hidden flex flex-col h-full hover:shadow-2xl transition-all border border-transparent hover:border-red-200">
+                <div class="w-full relative overflow-hidden bg-gray-50">
+                    <span class="absolute top-2 left-2 bg-yellow-500 text-white text-[10px] font-bold px-2 py-1 rounded-full z-10 uppercase">
+              New
+            </span>
+                    <img src="https://i.pinimg.com/1200x/db/df/c2/dbdfc20407249527be5861b505540276.jpg" class="w-full h-auto object-contain hover:scale-110 transition-transform duration-500" alt="BBQ Chicken Pizza" />
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-bold text-xl">BBQ Chicken</h3>
+                        <span class="text-red-600 font-bold">$19.99</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-2">
+                        Grilled chicken, red onions, and cilantro drizzled with tangy BBQ sauce.
+                    </p>
+                    <button class="order-btn bg-orange-500 text-white py-3 px-8 rounded-full hover:bg-orange-600 transition shadow-lg w-full sm:w-auto">
+              Order Now
+              <i class="bi bi-cart ms-2"></i>
+            </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact us section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+                    Get In
+                    <span class="text-red-500">Touch</span>
+                </h2>
+                <p class="text-gray-600 mt-4">
+                    Have a question or want to book a table? Send us a message!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">
+                  Full Name
+                </label>
+                            <input type="text" placeholder="John Doe" class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">
+                  Email Address
+                </label>
+                            <input type="email" placeholder="example@mail.com" class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">
+                  Message
+                </label>
+                            <textarea rows="4" placeholder="How can we help you?" class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-red-500 text-white font-bold py-3 rounded-lg hover:bg-red-600 transition">
+                Send Message
+              </button>
+                    </form>
+                </div>
+
+                <div class="flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-red-100 p-3 rounded-full text-red-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Location</h4>
+                                <p class="text-gray-600">15 may Dharag Street, KY City,</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-red-100 p-3 rounded-full text-red-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
+                  </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Phone</h4>
+                                <p class="text-gray-600">+252 2001234</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 h-48 bg-gray-300 rounded-2xl overflow-hidden shadow-inner relative">
+                        <iframe class="absolute inset-0 w-full h-full grayscale opacity-80" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215707164171!2d-73.9878441!3d40.7579747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1650000000000"
+                            style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="relative w-full overflow-hidden leading-[0] rotate-180">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-16 fill-gray-900">
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+        ></path>
+      </svg>
+    </div>
+    <div id="orderModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+        <div class="bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden transform transition-all">
+            <div class="flex justify-between items-center p-6 border-b">
+                <h3 class="text-2xl font-bold text-gray-800">
+                    Place Your
+                    <span class="text-orange-500">Order</span>
+                </h3>
+                <button id="closeModal" class="text-gray-400 hover:text-gray-600 text-2xl">
+            <i class="bi bi-x-lg"></i>
+          </button>
+            </div>
+
+            <form class="p-6 space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">
+              Item Selected
+            </label>
+                    <input type="text" id="selectedItem" readonly class="w-full mt-1 p-3 bg-gray-100 border border-gray-200 rounded-lg outline-none text-gray-500" />
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">
+                Full Name
+              </label>
+                        <input type="text" id="customerName" required class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">
+                Phone
+              </label>
+                        <input type="tel" id="customerPhone" required class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none" />
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">
+              Delivery Address
+            </label>
+                    <textarea id="customerAddress" rows="2" required class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-orange-500 text-white font-bold py-4 rounded-xl hover:bg-orange-600 transition shadow-lg">
+            Confirm Order
+          </button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 text-white pb-10">
+        <div class="container mx-auto px-6">
+            <div class="relative -top-20 bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="max-w-md">
+                    <h2 class="text-3xl font-bold">
+                        Dharag for
+                        <span class="text-red-500">Discounts?</span>
+                    </h2>
+                    <p class="text-gray-300 mt-2">
+                        Join 5,000+ foodies and get 20% off your first order.
+                    </p>
+                </div>
+                <form class="flex w-full md:w-auto bg-white rounded-full p-1 shadow-inner">
+                    <input type="email" placeholder="Enter your email" class="bg-transparent text-gray-800 px-6 py-2 w-full md:w-64 focus:outline-none" />
+                    <button class="bg-red-500 hover:bg-red-600 text-white font-bold px-8 py-3 rounded-full transition-all transform hover:scale-105">
+              Join Now
+            </button>
+                </form>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 mt-[-2rem] mb-12">
+                <div class="space-y-6">
+                    <div class="text-4xl font-black tracking-tighter uppercase">
+                        Dharag
+                        <span class="text-red-500">Foodie.</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed max-w-sm">
+                        We don't just cook; we create edible memories. Experience the gold standard of fast food and gourmet snacks.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-500 transition-all duration-300 group">
+                            <i class="fab fa-instagram group-hover:rotate-12"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-500 transition-all duration-300 group">
+                            <i class="fab fa-facebook-f group-hover:rotate-12"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-500 transition-all duration-300 group">
+                            <i class="fab fa-whatsapp group-hover:rotate-12"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-sm font-bold uppercase tracking-widest text-red-500 mb-6">
+                            Explore
+                        </h4>
+                        <ul class="space-y-4 text-gray-400">
+                            <li>
+                                <a href="#" class="hover:text-white transition-colors flex items-center gap-2 group">
+                                    <span class="w-0 group-hover:w-2 h-[2px] bg-red-500 transition-all"></span> Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#about" class="hover:text-white transition-colors flex items-center gap-2 group">
+                                    <span class="w-0 group-hover:w-2 h-[2px] bg-red-500 transition-all"></span> Our Story
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#menu" class="hover:text-white transition-colors flex items-center gap-2 group">
+                                    <span class="w-0 group-hover:w-2 h-[2px] bg-red-500 transition-all"></span> The Menu
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-bold uppercase tracking-widest text-red-500 mb-6">
+                            Support
+                        </h4>
+                        <ul class="space-y-4 text-gray-400">
+                            <li>
+                                <a href="#" class="hover:text-white transition-colors">
+                    Help Center
+                  </a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-white transition-colors">
+                    Privacy
+                  </a>
+                            </li>
+                            <li>
+                                <a href="#contact" class="hover:text-white transition-colors">
+                    Contact
+                  </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800/50 p-8 rounded-3xl border border-gray-700/50">
+                    <h4 class="text-lg font-bold mb-4">Visit Us</h4>
+                    <p class="text-gray-400 text-sm mb-6 italic">
+                        "Where the flavor lives."
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="text-red-500">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <span class="text-sm text-gray-300">
+                  15May Dharag Street, KY City
+                </span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="text-red-500"><i class="fas fa-phone-alt"></i></div>
+                            <span class="text-sm text-gray-300">252 2001234 Dharag</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center border-t border-gray-800 pt-10 text-gray-500 text-xs">
+                <p>DESIGNED FOR Dharag | © 2026 Dharag</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
